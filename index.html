@@ -56,6 +56,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 35vw;
+            height: 30px;
         }
 
         /* 线条基础样式 - 进一步增大尺寸 */
@@ -70,9 +72,54 @@
             height: 30px;
         }
 
+        /* 嘴巴单条线样式 - 替换折线 */
         .mouth-line {
-            width: 35vw;
-            height: 30px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform-origin: center center;
+        }
+
+        /* 眼睛装饰线 */
+        .eye-decoration {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .eye-decoration.left {
+            left: 5px;
+        }
+
+        .eye-decoration.right {
+            right: 5px;
+        }
+
+        /* 嘴巴装饰线 */
+        .mouth-decoration {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 12px solid #fff;
+            top: -15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mouth-decoration.left {
+            left: 20%;
+        }
+
+        .mouth-decoration.right {
+            right: 20%;
         }
 
         /* 表情状态 - 只改变线条样式，不影响容器定位 */
@@ -83,9 +130,10 @@
         }
 
         .normal .mouth-line {
-            width: 35vw;
-            height: 30px;
+            width: 100%;
+            height: 100%;
             transform: none;
+            border-radius: 0;
         }
 
         .happy .eye-line {
@@ -96,22 +144,29 @@
         }
 
         .happy .mouth-line {
-            width: 40vw;
-            height: 36px;
-            border-radius: 50%;
+            width: 110%;
+            height: 120%;
             transform: rotate(20deg);
+            border-radius: 50%;
+            top: -10%;
+        }
+
+        .happy .eye-decoration {
+            opacity: 1;
         }
 
         .angry .eye-line {
             width: 20vw;
             height: 36px;
-            transform: rotate(-15deg);
+            transform: rotate(-15deg) scaleY(0.6);
         }
 
         .angry .mouth-line {
-            width: 25vw;
-            height: 36px;
+            width: 90%;
+            height: 120%;
             transform: rotate(-20deg);
+            border-radius: 0;
+            top: 10%;
         }
 
         .sad .eye-line {
@@ -122,9 +177,11 @@
         }
 
         .sad .mouth-line {
-            width: 28vw;
-            height: 18px;
+            width: 90%;
+            height: 120%;
             transform: rotate(-10deg);
+            border-radius: 0;
+            top: -10%;
         }
 
         .surprised .eye-line {
@@ -139,6 +196,7 @@
             height: 12vw;
             border-radius: 50%;
             transform: none;
+            border-radius: 50%;
         }
 
         .wink .left-eye-line {
@@ -155,22 +213,28 @@
         }
 
         .wink .mouth-line {
-            width: 38vw;
-            height: 36px;
-            border-radius: 50%;
+            width: 105%;
+            height: 120%;
             transform: rotate(15deg);
+            border-radius: 50%;
+            top: -10%;
+        }
+
+        .wink .eye-decoration.right {
+            opacity: 1;
         }
 
         .confused .eye-line {
             width: 20vw;
             height: 30px;
-            transform: rotate(10deg);
+            transform: rotate(10deg) skewX(20deg);
         }
 
         .confused .mouth-line {
-            width: 25vw;
-            height: 36px;
-            transform: skewX(-20deg);
+            width: 90%;
+            height: 100%;
+            transform: skewX(-20deg) rotate(5deg);
+            border-radius: 0;
         }
 
         .sleepy .eye-line {
@@ -181,7 +245,7 @@
         }
 
         .sleepy .mouth-line {
-            width: 40vw;
+            width: 12vw;
             height: 12vw;
             border-radius: 50%;
             transform: none;
@@ -195,11 +259,17 @@
         }
 
         .excited .mouth-line {
-            width: 45vw;
-            height: 48px;
-            border-radius: 50%;
+            width: 120%;
+            height: 160%;
             transform: rotate(25deg);
+            border-radius: 50%;
+            top: -30%;
             animation: bounce 0.5s ease-in-out infinite alternate;
+        }
+
+        .excited .eye-decoration {
+            opacity: 1;
+            animation: sparkle 0.8s ease-in-out infinite;
         }
 
         .cool .eye-line {
@@ -209,9 +279,10 @@
         }
 
         .cool .mouth-line {
-            width: 40vw;
-            height: 18px;
+            width: 100%;
+            height: 100%;
             transform: rotate(-5deg);
+            border-radius: 0;
         }
 
         .love .eye-line {
@@ -223,68 +294,68 @@
         }
 
         .love .mouth-line {
-            width: 30vw;
+            width: 15vw;
             height: 15vw;
             border-radius: 50%;
             background-color: #ff69b4;
             transform: none;
         }
 
-        /* 方向性表情 */
-        .look-left .left-eye-line {
-            width: 18vw;
-            transform: translateX(-5vw);
+        .love .eye-decoration {
+            opacity: 1;
+            background-color: #fff;
+            animation: heartbeat 1s ease-in-out infinite;
         }
 
-        .look-left .right-eye-line {
+        /* 方向性表情 */
+        .look-left .eye-line {
             width: 18vw;
-            transform: translateX(-5vw);
+            transform: translateX(-5vw) skewX(-10deg);
         }
 
         .look-left .mouth-line {
-            width: 30vw;
-            transform: translateX(-3vw) rotate(-5deg);
+            width: 90%;
+            height: 100%;
+            transform: translateX(-10%) rotate(-5deg) skewX(-5deg);
+            border-radius: 0;
         }
 
-        .look-right .left-eye-line {
+        .look-right .eye-line {
             width: 18vw;
-            transform: translateX(5vw);
-        }
-
-        .look-right .right-eye-line {
-            width: 18vw;
-            transform: translateX(5vw);
+            transform: translateX(5vw) skewX(10deg);
         }
 
         .look-right .mouth-line {
-            width: 30vw;
-            transform: translateX(3vw) rotate(5deg);
+            width: 90%;
+            height: 100%;
+            transform: translateX(10%) rotate(5deg) skewX(5deg);
+            border-radius: 0;
         }
 
-        .look-up .left-eye-line,
-        .look-up .right-eye-line {
+        .look-up .eye-line {
             width: 22vw;
             height: 18px;
-            transform: translateY(-12px);
+            transform: translateY(-12px) scaleY(0.7);
         }
 
         .look-up .mouth-line {
-            width: 30vw;
-            height: 18px;
-            transform: translateY(-12px);
+            width: 90%;
+            height: 60%;
+            transform: translateY(-40%) scaleY(0.7);
+            border-radius: 0;
         }
 
-        .look-down .left-eye-line,
-        .look-down .right-eye-line {
+        .look-down .eye-line {
             width: 22vw;
             height: 18px;
-            transform: translateY(12px);
+            transform: translateY(12px) scaleY(1.3);
         }
 
         .look-down .mouth-line {
-            width: 30vw;
-            height: 18px;
-            transform: translateY(12px);
+            width: 90%;
+            height: 140%;
+            transform: translateY(20%) scaleY(1.3);
+            border-radius: 0;
         }
 
         /* 眨眼动画 */
@@ -296,6 +367,16 @@
         @keyframes bounce {
             0% { transform: translateY(0); }
             100% { transform: translateY(-5px); }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(0.5); }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
 
         /* 控制菜单切换按钮 */
@@ -419,7 +500,7 @@
                 height: 20px;
             }
 
-            .mouth-line {
+            .mouth-container {
                 width: 40vw;
                 height: 20px;
             }
@@ -431,8 +512,8 @@
             }
 
             .happy .mouth-line {
-                width: 45vw;
-                height: 24px;
+                height: 120%;
+                top: -10%;
             }
 
             .angry .eye-line {
@@ -441,8 +522,8 @@
             }
 
             .angry .mouth-line {
-                width: 30vw;
-                height: 24px;
+                height: 120%;
+                top: 10%;
             }
 
             .surprised .eye-line {
@@ -464,9 +545,19 @@
                 height: 24px;
             }
 
+            .wink .mouth-line {
+                height: 120%;
+                top: -10%;
+            }
+
             .confused .eye-line {
                 width: 25vw;
                 height: 18px;
+            }
+
+            .sleepy .mouth-line {
+                width: 15vw;
+                height: 15vw;
             }
 
             .controls {
@@ -497,7 +588,7 @@
                 height: 40px;
             }
 
-            .mouth-line {
+            .mouth-container {
                 width: 420px;
                 height: 40px;
             }
@@ -508,8 +599,8 @@
             }
 
             .happy .mouth-line {
-                width: 480px;
-                height: 48px;
+                height: 120%;
+                top: -10%;
             }
 
             .angry .eye-line {
@@ -518,8 +609,8 @@
             }
 
             .angry .mouth-line {
-                width: 300px;
-                height: 48px;
+                height: 120%;
+                top: 10%;
             }
 
             .surprised .eye-line {
@@ -541,13 +632,18 @@
                 height: 48px;
             }
 
+            .wink .mouth-line {
+                height: 120%;
+                top: -10%;
+            }
+
             .love .eye-line {
                 width: 216px;
                 height: 216px;
             }
 
             .love .mouth-line {
-                width: 360px;
+                width: 180px;
                 height: 180px;
             }
         }
@@ -558,16 +654,22 @@
         <!-- 左眼容器 -->
         <div class="eye-container left-eye-container">
             <div class="line eye-line left-eye-line"></div>
+            <div class="eye-decoration left"></div>
+            <div class="eye-decoration right"></div>
         </div>
         
         <!-- 右眼容器 -->
         <div class="eye-container right-eye-container">
             <div class="line eye-line right-eye-line"></div>
+            <div class="eye-decoration left"></div>
+            <div class="eye-decoration right"></div>
         </div>
         
         <!-- 嘴巴容器 -->
         <div class="mouth-container">
+            <div class="mouth-decoration left"></div>
             <div class="line mouth-line"></div>
+            <div class="mouth-decoration right"></div>
         </div>
     </div>
 
