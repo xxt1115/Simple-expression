@@ -33,24 +33,24 @@
         /* 眼睛容器 - 只负责定位 */
         .eye-container {
             position: absolute;
-            top: 35%;
+            top: 30%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .left-eye-container {
-            left: calc(50% - 180px);
+            left: 15%;
         }
 
         .right-eye-container {
-            left: calc(50% + 60px);
+            right: 15%;
         }
 
-        /* 嘴巴容器 */
+        /* 嘴巴容器 - 向下调整 */
         .mouth-container {
             position: absolute;
-            top: 55%;
+            top: 65%;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -58,7 +58,7 @@
             align-items: center;
         }
 
-        /* 线条基础样式 */
+        /* 线条基础样式 - 进一步增大尺寸 */
         .line {
             background-color: #fff;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -66,165 +66,165 @@
         }
 
         .eye-line {
-            width: 120px;
-            height: 12px;
+            width: 25vw;
+            height: 30px;
         }
 
         .mouth-line {
-            width: 160px;
-            height: 12px;
+            width: 35vw;
+            height: 30px;
         }
 
         /* 表情状态 - 只改变线条样式，不影响容器定位 */
         .normal .eye-line {
-            width: 120px;
-            height: 12px;
+            width: 25vw;
+            height: 30px;
             transform: none;
         }
 
         .normal .mouth-line {
-            width: 160px;
-            height: 12px;
+            width: 35vw;
+            height: 30px;
             transform: none;
         }
 
         .happy .eye-line {
-            width: 140px;
-            height: 16px;
+            width: 28vw;
+            height: 36px;
             border-radius: 50%;
             transform: none;
         }
 
         .happy .mouth-line {
-            width: 200px;
-            height: 16px;
+            width: 40vw;
+            height: 36px;
             border-radius: 50%;
             transform: rotate(20deg);
         }
 
         .angry .eye-line {
-            width: 100px;
-            height: 16px;
+            width: 20vw;
+            height: 36px;
             transform: rotate(-15deg);
         }
 
         .angry .mouth-line {
-            width: 120px;
-            height: 16px;
+            width: 25vw;
+            height: 36px;
             transform: rotate(-20deg);
         }
 
         .sad .eye-line {
-            width: 100px;
-            height: 8px;
+            width: 20vw;
+            height: 18px;
             opacity: 0.8;
             transform: none;
         }
 
         .sad .mouth-line {
-            width: 140px;
-            height: 8px;
+            width: 28vw;
+            height: 18px;
             transform: rotate(-10deg);
         }
 
         .surprised .eye-line {
-            width: 60px;
-            height: 60px;
+            width: 12vw;
+            height: 12vw;
             border-radius: 50%;
             transform: none;
         }
 
         .surprised .mouth-line {
-            width: 60px;
-            height: 60px;
+            width: 12vw;
+            height: 12vw;
             border-radius: 50%;
             transform: none;
         }
 
         .wink .left-eye-line {
             height: 0;
-            width: 140px;
+            width: 28vw;
             transform: none;
         }
 
         .wink .right-eye-line {
-            width: 140px;
-            height: 16px;
+            width: 28vw;
+            height: 36px;
             border-radius: 50%;
             transform: none;
         }
 
         .wink .mouth-line {
-            width: 180px;
-            height: 16px;
+            width: 38vw;
+            height: 36px;
             border-radius: 50%;
             transform: rotate(15deg);
         }
 
         .confused .eye-line {
-            width: 100px;
-            height: 12px;
+            width: 20vw;
+            height: 30px;
             transform: rotate(10deg);
         }
 
         .confused .mouth-line {
-            width: 120px;
-            height: 16px;
+            width: 25vw;
+            height: 36px;
             transform: skewX(-20deg);
         }
 
         .sleepy .eye-line {
-            width: 120px;
-            height: 4px;
+            width: 25vw;
+            height: 8px;
             opacity: 0.6;
             transform: none;
         }
 
         .sleepy .mouth-line {
-            width: 200px;
-            height: 60px;
+            width: 40vw;
+            height: 12vw;
             border-radius: 50%;
             transform: none;
         }
 
         .excited .eye-line {
-            width: 160px;
-            height: 20px;
+            width: 30vw;
+            height: 42px;
             border-radius: 50%;
             animation: bounce 0.5s ease-in-out infinite alternate;
         }
 
         .excited .mouth-line {
-            width: 240px;
-            height: 24px;
+            width: 45vw;
+            height: 48px;
             border-radius: 50%;
             transform: rotate(25deg);
             animation: bounce 0.5s ease-in-out infinite alternate;
         }
 
         .cool .eye-line {
-            width: 160px;
-            height: 8px;
+            width: 30vw;
+            height: 18px;
             transform: rotate(-5deg);
         }
 
         .cool .mouth-line {
-            width: 200px;
-            height: 8px;
+            width: 40vw;
+            height: 18px;
             transform: rotate(-5deg);
         }
 
         .love .eye-line {
-            width: 100px;
-            height: 100px;
+            width: 18vw;
+            height: 18vw;
             border-radius: 50%;
             background-color: #ff69b4;
             transform: none;
         }
 
         .love .mouth-line {
-            width: 160px;
-            height: 80px;
+            width: 30vw;
+            height: 15vw;
             border-radius: 50%;
             background-color: #ff69b4;
             transform: none;
@@ -232,59 +232,59 @@
 
         /* 方向性表情 */
         .look-left .left-eye-line {
-            width: 80px;
-            transform: translateX(-20px);
+            width: 18vw;
+            transform: translateX(-5vw);
         }
 
         .look-left .right-eye-line {
-            width: 80px;
-            transform: translateX(-20px);
+            width: 18vw;
+            transform: translateX(-5vw);
         }
 
         .look-left .mouth-line {
-            width: 140px;
-            transform: translateX(-10px) rotate(-5deg);
+            width: 30vw;
+            transform: translateX(-3vw) rotate(-5deg);
         }
 
         .look-right .left-eye-line {
-            width: 80px;
-            transform: translateX(20px);
+            width: 18vw;
+            transform: translateX(5vw);
         }
 
         .look-right .right-eye-line {
-            width: 80px;
-            transform: translateX(20px);
+            width: 18vw;
+            transform: translateX(5vw);
         }
 
         .look-right .mouth-line {
-            width: 140px;
-            transform: translateX(10px) rotate(5deg);
+            width: 30vw;
+            transform: translateX(3vw) rotate(5deg);
         }
 
         .look-up .left-eye-line,
         .look-up .right-eye-line {
-            width: 100px;
-            height: 8px;
-            transform: translateY(-5px);
+            width: 22vw;
+            height: 18px;
+            transform: translateY(-12px);
         }
 
         .look-up .mouth-line {
-            width: 140px;
-            height: 8px;
-            transform: translateY(-5px);
+            width: 30vw;
+            height: 18px;
+            transform: translateY(-12px);
         }
 
         .look-down .left-eye-line,
         .look-down .right-eye-line {
-            width: 100px;
-            height: 8px;
-            transform: translateY(5px);
+            width: 22vw;
+            height: 18px;
+            transform: translateY(12px);
         }
 
         .look-down .mouth-line {
-            width: 140px;
-            height: 8px;
-            transform: translateY(5px);
+            width: 30vw;
+            height: 18px;
+            transform: translateY(12px);
         }
 
         /* 眨眼动画 */
@@ -298,31 +298,75 @@
             100% { transform: translateY(-5px); }
         }
 
-        /* 控制面板 */
-        .controls {
+        /* 控制菜单切换按钮 */
+        .menu-toggle {
             position: fixed;
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
             display: flex;
-            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 20;
+        }
+
+        .menu-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        .menu-toggle::before {
+            content: '☰';
+            color: #fff;
+            font-size: 28px;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-toggle.active::before {
+            transform: rotate(90deg);
+        }
+
+        /* 控制面板 */
+        .controls {
+            position: fixed;
+            bottom: 110px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            display: flex;
+            gap: 12px;
             background: rgba(255, 255, 255, 0.1);
-            padding: 12px 20px;
+            padding: 18px 25px;
             border-radius: 50px;
             backdrop-filter: blur(10px);
             z-index: 10;
             flex-wrap: wrap;
-            max-width: 90%;
+            max-width: 95%;
             justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .controls.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+            visibility: visible;
         }
 
         .btn {
-            padding: 8px 16px;
+            padding: 12px 20px;
             background-color: rgba(255, 255, 255, 0.2);
             color: #fff;
             border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 20px;
-            font-size: 12px;
+            border-radius: 30px;
+            font-size: 16px;
             cursor: pointer;
             transition: all 0.3s ease;
             backdrop-filter: blur(5px);
@@ -347,12 +391,12 @@
             left: 50%;
             transform: translateX(-50%);
             color: #fff;
-            font-size: 14px;
+            font-size: 18px;
             opacity: 0;
             transition: opacity 0.3s ease;
             background: rgba(255, 255, 255, 0.1);
-            padding: 8px 20px;
-            border-radius: 20px;
+            padding: 12px 30px;
+            border-radius: 30px;
             backdrop-filter: blur(10px);
         }
 
@@ -363,76 +407,148 @@
         /* 响应式调整 */
         @media (max-width: 768px) {
             .left-eye-container {
-                left: calc(50% - 120px);
+                left: 10%;
             }
 
             .right-eye-container {
-                left: calc(50% + 40px);
+                right: 10%;
             }
 
             .eye-line {
-                width: 80px;
-                height: 8px;
+                width: 30vw;
+                height: 20px;
             }
 
             .mouth-line {
-                width: 110px;
-                height: 8px;
+                width: 40vw;
+                height: 20px;
             }
 
             /* 调整移动设备上的表情大小 */
             .happy .eye-line {
-                width: 90px;
-                height: 10px;
+                width: 35vw;
+                height: 24px;
             }
 
             .happy .mouth-line {
-                width: 130px;
-                height: 10px;
+                width: 45vw;
+                height: 24px;
             }
 
             .angry .eye-line {
-                width: 70px;
-                height: 10px;
+                width: 25vw;
+                height: 24px;
             }
 
             .angry .mouth-line {
-                width: 80px;
-                height: 10px;
+                width: 30vw;
+                height: 24px;
             }
 
             .surprised .eye-line {
-                width: 40px;
-                height: 40px;
+                width: 15vw;
+                height: 15vw;
             }
 
             .surprised .mouth-line {
-                width: 40px;
-                height: 40px;
+                width: 15vw;
+                height: 15vw;
             }
 
             .wink .left-eye-line {
-                width: 90px;
+                width: 35vw;
             }
 
             .wink .right-eye-line {
-                width: 90px;
-                height: 10px;
+                width: 35vw;
+                height: 24px;
             }
 
             .confused .eye-line {
-                width: 70px;
-                height: 8px;
+                width: 25vw;
+                height: 18px;
             }
 
             .controls {
-                gap: 8px;
-                padding: 10px 15px;
+                gap: 10px;
+                padding: 15px 20px;
+                bottom: 100px;
             }
 
             .btn {
-                padding: 6px 12px;
-                font-size: 11px;
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+
+            .menu-toggle {
+                width: 50px;
+                height: 50px;
+            }
+
+            .menu-toggle::before {
+                font-size: 24px;
+            }
+        }
+
+        /* 超大屏幕适配 */
+        @media (min-width: 1200px) {
+            .eye-line {
+                width: 300px;
+                height: 40px;
+            }
+
+            .mouth-line {
+                width: 420px;
+                height: 40px;
+            }
+
+            .happy .eye-line {
+                width: 340px;
+                height: 48px;
+            }
+
+            .happy .mouth-line {
+                width: 480px;
+                height: 48px;
+            }
+
+            .angry .eye-line {
+                width: 240px;
+                height: 48px;
+            }
+
+            .angry .mouth-line {
+                width: 300px;
+                height: 48px;
+            }
+
+            .surprised .eye-line {
+                width: 144px;
+                height: 144px;
+            }
+
+            .surprised .mouth-line {
+                width: 144px;
+                height: 144px;
+            }
+
+            .wink .left-eye-line {
+                width: 340px;
+            }
+
+            .wink .right-eye-line {
+                width: 340px;
+                height: 48px;
+            }
+
+            .love .eye-line {
+                width: 216px;
+                height: 216px;
+            }
+
+            .love .mouth-line {
+                width: 360px;
+                height: 180px;
             }
         }
     </style>
@@ -457,7 +573,11 @@
 
     <div class="random-indicator" id="randomIndicator">随机表情模式</div>
     
-    <div class="controls">
+    <!-- 菜单切换按钮 -->
+    <div class="menu-toggle" id="menuToggle"></div>
+    
+    <!-- 控制面板 -->
+    <div class="controls" id="controls">
         <button class="btn" data-emotion="normal">正常</button>
         <button class="btn" data-emotion="happy">开心</button>
         <button class="btn" data-emotion="angry">生气</button>
@@ -479,6 +599,8 @@
 
     <script>
         const face = document.getElementById('face');
+        const controls = document.getElementById('controls');
+        const menuToggle = document.getElementById('menuToggle');
         const buttons = document.querySelectorAll('.btn[data-emotion]');
         const randomBtn = document.getElementById('randomBtn');
         const autoRandomBtn = document.getElementById('autoRandomBtn');
@@ -498,9 +620,28 @@
         let isAutoRandom = false;
         let firstRandomClick = true; // 标记是否是第一次点击随机按钮
         let isAnimating = false; // 防止动画重叠
+        let isMenuOpen = false; // 菜单是否打开
+        let currentEmotionTimeout = null; // 当前表情的定时器
         
-        // 切换表情
-        function changeEmotion(emotion) {
+        // 获取随机持续时间（1-6秒）
+        function getRandomDuration() {
+            return Math.random() * 5000 + 1000; // 1000-6000毫秒
+        }
+        
+        // 菜单切换
+        menuToggle.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            menuToggle.classList.toggle('active');
+            controls.classList.toggle('show');
+        });
+        
+        // 切换表情（带持续时间）
+        function changeEmotionWithDuration(emotion, duration = null) {
+            // 清除之前的定时器
+            if (currentEmotionTimeout) {
+                clearTimeout(currentEmotionTimeout);
+            }
+            
             // 移除所有表情类
             face.className = 'face';
             
@@ -518,12 +659,25 @@
             
             // 如果是眨眼表情，执行一次眨眼后恢复
             if (emotion === 'wink') {
-                setTimeout(() => {
+                currentEmotionTimeout = setTimeout(() => {
                     if (currentEmotion === 'wink') {
-                        changeEmotion('normal');
+                        changeEmotionWithDuration('normal');
                     }
                 }, 1500);
+                return;
             }
+            
+            // 如果指定了持续时间，设置定时器恢复到正常状态
+            if (duration !== null && duration > 0) {
+                currentEmotionTimeout = setTimeout(() => {
+                    changeEmotionWithDuration('normal');
+                }, duration);
+            }
+        }
+        
+        // 切换表情（不带持续时间，用于手动控制）
+        function changeEmotion(emotion) {
+            changeEmotionWithDuration(emotion, null);
         }
         
         // 带动画的随机表情切换
@@ -533,22 +687,24 @@
             isAnimating = true;
             
             // 第一步：恢复正常
-            changeEmotion('normal');
+            changeEmotionWithDuration('normal', 400);
             
             setTimeout(() => {
                 // 第二步：随机选择一个方向
                 const randomDirection = lookDirections[Math.floor(Math.random() * lookDirections.length)];
-                changeEmotion(randomDirection);
+                const directionDuration = getRandomDuration();
+                changeEmotionWithDuration(randomDirection, directionDuration);
                 
                 setTimeout(() => {
                     // 第三步：再次恢复正常
-                    changeEmotion('normal');
+                    changeEmotionWithDuration('normal', 400);
                     
                     setTimeout(() => {
                         // 第四步：切换到最终表情
                         const randomIndex = Math.floor(Math.random() * emotions.length);
                         const emotion = emotions[randomIndex];
-                        changeEmotion(emotion);
+                        const finalDuration = getRandomDuration();
+                        changeEmotionWithDuration(emotion, finalDuration);
                         
                         // 显示提示
                         if (showIndicator) {
@@ -560,7 +716,7 @@
                         
                         isAnimating = false;
                     }, 400);
-                }, 600);
+                }, directionDuration);
             }, 400);
         }
         
@@ -568,7 +724,8 @@
         function simpleRandomEmotion(showIndicator = false) {
             const randomIndex = Math.floor(Math.random() * emotions.length);
             const emotion = emotions[randomIndex];
-            changeEmotion(emotion);
+            const duration = getRandomDuration();
+            changeEmotionWithDuration(emotion, duration);
             
             // 只有在需要显示提示时才显示
             if (showIndicator) {
@@ -612,9 +769,13 @@
                 randomIndicator.classList.remove('show');
             }, 1000);
             
+            // 立即执行第一次
+            animatedRandomEmotion(false);
+            
+            // 设置定时器执行后续的随机切换
             autoRandomInterval = setInterval(() => {
                 animatedRandomEmotion(false); // 自动随机时不显示提示
-            }, 4000 + Math.random() * 2000);
+            }, 8000 + Math.random() * 4000); // 8-12秒切换一次，给表情足够展示时间
         }
         
         function stopAutoRandom() {
@@ -623,6 +784,9 @@
             autoRandomBtn.textContent = '自动随机';
             randomIndicator.classList.remove('show');
             clearInterval(autoRandomInterval);
+            
+            // 停止时恢复正常状态
+            changeEmotionWithDuration('normal');
         }
         
         // 按钮事件
@@ -631,7 +795,10 @@
                 if (isAutoRandom) {
                     stopAutoRandom();
                 }
-                changeEmotion(btn.dataset.emotion);
+                // 手动点击时也使用随机持续时间
+                const emotion = btn.dataset.emotion;
+                const duration = getRandomDuration();
+                changeEmotionWithDuration(emotion, duration);
             });
         });
         
@@ -657,21 +824,51 @@
             if (isAutoRandom && e.key !== 'Escape') return;
             
             switch(e.key) {
-                case '1': changeEmotion('normal'); break;
-                case '2': changeEmotion('happy'); break;
-                case '3': changeEmotion('angry'); break;
-                case '4': changeEmotion('sad'); break;
-                case '5': changeEmotion('surprised'); break;
-                case '6': changeEmotion('wink'); break;
-                case '7': changeEmotion('confused'); break;
-                case '8': changeEmotion('sleepy'); break;
-                case '9': changeEmotion('excited'); break;
-                case '0': changeEmotion('cool'); break;
-                case 'l': changeEmotion('love'); break;
-                case 'q': changeEmotion('look-left'); break;
-                case 'w': changeEmotion('look-up'); break;
-                case 'e': changeEmotion('look-right'); break;
-                case 's': changeEmotion('look-down'); break;
+                case '1': 
+                    changeEmotionWithDuration('normal', getRandomDuration()); 
+                    break;
+                case '2': 
+                    changeEmotionWithDuration('happy', getRandomDuration()); 
+                    break;
+                case '3': 
+                    changeEmotionWithDuration('angry', getRandomDuration()); 
+                    break;
+                case '4': 
+                    changeEmotionWithDuration('sad', getRandomDuration()); 
+                    break;
+                case '5': 
+                    changeEmotionWithDuration('surprised', getRandomDuration()); 
+                    break;
+                case '6': 
+                    changeEmotionWithDuration('wink', getRandomDuration()); 
+                    break;
+                case '7': 
+                    changeEmotionWithDuration('confused', getRandomDuration()); 
+                    break;
+                case '8': 
+                    changeEmotionWithDuration('sleepy', getRandomDuration()); 
+                    break;
+                case '9': 
+                    changeEmotionWithDuration('excited', getRandomDuration()); 
+                    break;
+                case '0': 
+                    changeEmotionWithDuration('cool', getRandomDuration()); 
+                    break;
+                case 'l': 
+                    changeEmotionWithDuration('love', getRandomDuration()); 
+                    break;
+                case 'q': 
+                    changeEmotionWithDuration('look-left', getRandomDuration()); 
+                    break;
+                case 'w': 
+                    changeEmotionWithDuration('look-up', getRandomDuration()); 
+                    break;
+                case 'e': 
+                    changeEmotionWithDuration('look-right', getRandomDuration()); 
+                    break;
+                case 's': 
+                    changeEmotionWithDuration('look-down', getRandomDuration()); 
+                    break;
                 case ' ': blink(); break;
                 case 'r': 
                     if (isAutoRandom) {
@@ -681,6 +878,9 @@
                     simpleRandomEmotion(firstRandomClick);
                     firstRandomClick = false;
                     break;
+                case 'm': // M键切换菜单
+                    menuToggle.click();
+                    break;
                 case 'Escape': 
                     if (isAutoRandom) stopAutoRandom();
                     break;
@@ -688,7 +888,7 @@
         });
         
         // 初始化
-        changeEmotion('normal');
+        changeEmotionWithDuration('normal', getRandomDuration());
         startAutoBlink();
         
         // 触摸屏幕随机切换（移动设备）
